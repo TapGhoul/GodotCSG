@@ -1,18 +1,4 @@
-[gd_scene load_steps=2 format=1]
-
-[sub_resource type="GDScript" id=1]
-
-resource/name = "ReloadBtn"
-script/source = "tool
-extends Button
-
-func _enter_tree():
-	pass
-
-func _pressed():
-	var root_node = get_node(\"/root/\")
-	var scn_node = root_node.get_child(0)
-	scn_node.queue_free()"
+[gd_scene format=1]
 
 [node name="Container" type="TabContainer"]
 
@@ -80,11 +66,11 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 12.0
 margin/bottom = 20.0
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Reload"
 flat = false
-script/script = SubResource( 1 )
 
 

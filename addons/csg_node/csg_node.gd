@@ -11,10 +11,10 @@ func _enter_tree():
 	surftool.add_vertex(Vector3(1, 0, 0))
 	surftool.add_vertex(Vector3(0, 0, 0))
 	
-	
 	surftool.add_vertex(Vector3(1, 1, 0))
 	surftool.add_vertex(Vector3(1, 0, 0))
 	surftool.add_vertex(Vector3(0, 1, 0))
+	
 	surftool.commit(mesh)
 	set_mesh(mesh)
 
