@@ -1,19 +1,173 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://addons/csg_node/csg_node.gd" type="Script" id=1]
 [ext_resource path="res://addons/csg_node/csg_node.png" type="Texture" id=2]
 
-[sub_resource type="Mesh" id=1]
+[sub_resource type="FixedMaterial" id=1]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 2.33082e-09
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 1, 1, 0, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=2]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 0.0
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 1, 0, 1, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="Mesh" id=3]
 
 surfaces/0 = {
 "alphasort": false,
-"arrays": [ Vector3Array( 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0 ), null, null, null, null, null, null, null, null ],
+"arrays": [ Vector3Array( 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1 ), Vector3Array( 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1 ), null, null, null, null, null, null, null ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/1 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0 ), Vector3Array( 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/2 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0 ), Vector3Array( 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1 ), null, null, null, null, null, null, null ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/3 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1 ), Vector3Array( -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/4 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1 ), Vector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/5 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0 ), Vector3Array( 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/6 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 2, 2, 4, 2, 3, 4, 3, 3, 4, 2, 2, 4, 3, 3, 4, 3, 2, 4 ), Vector3Array( 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1 ), null, null, null, null, null, null, null ],
+"material": SubResource( 2 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/7 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 3, 2, 2, 3, 2, 4, 3, 3, 4, 3, 2, 2, 3, 3, 4, 3, 3, 2 ), Vector3Array( 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 2 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/8 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 2, 3, 3, 2, 2, 3, 2 ), Vector3Array( 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1 ), null, null, null, null, null, null, null ],
+"material": SubResource( 2 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/9 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 2, 2, 2, 2, 3, 2, 2, 3, 4, 2, 2, 2, 2, 3, 4, 2, 2, 4 ), Vector3Array( -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 2 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/10 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 2, 3, 2, 3, 3, 2, 3, 3, 4, 2, 3, 2, 3, 3, 4, 2, 3, 4 ), Vector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 2 ),
+"morph_arrays": [  ],
+"primitive": 4
+}
+surfaces/11 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 2, 2, 2, 2, 2, 4, 3, 2, 4, 2, 2, 2, 3, 2, 4, 3, 2, 2 ), Vector3Array( 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0 ), null, null, null, null, null, null, null ],
+"material": SubResource( 2 ),
 "morph_arrays": [  ],
 "primitive": 4
 }
 custom_aabb/custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 
-[node name="CSGNode" type="MeshInstance"]
+[node name="Node" type="Node"]
+
+[node name="CSGNode" type="MeshInstance" parent="."]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 layers = 1
@@ -30,9 +184,20 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = SubResource( 1 )
+mesh/mesh = SubResource( 3 )
 mesh/skeleton = NodePath("..")
 material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
 script/script = ExtResource( 1 )
 __meta__ = {
 "_editor_icon": ExtResource( 2 )
